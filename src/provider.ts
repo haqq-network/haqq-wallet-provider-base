@@ -1,10 +1,13 @@
-import {WalletInterface} from './types';
+import {ProviderBaseOptions, WalletInterface} from './types';
+import converter from 'bech32-converting';
 
-export class Provider {
+export class Provider<T extends object> {
   protected _wallet: WalletInterface;
+  protected _options: T & ProviderBaseOptions;
 
-  constructor(wallet: WalletInterface) {
+  constructor(wallet: WalletInterface, options: T & ProviderBaseOptions) {
     this._wallet = wallet;
+    this._options = options;
   }
 
   getEthAddress() {
@@ -12,8 +15,9 @@ export class Provider {
   }
 
   getCosmosAddress() {
-    return this._wallet.cosmosAddress;
+    return converter(this._options.cosmosPrefix).toBech32(this._wallet.address);
   }
 
-  abort() {}
+  abort() {
+  }
 }

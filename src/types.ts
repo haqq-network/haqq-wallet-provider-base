@@ -1,9 +1,11 @@
 import {TransactionRequest} from '@ethersproject/abstract-provider';
 
+export type ProviderBaseOptions = {
+  cosmosPrefix: string
+}
+
 export interface WalletInterface {
   get address(): string
-
-  get cosmosAddress(): string
 
   get deviceId(): string
 

@@ -1,4 +1,5 @@
 import {TransactionRequest} from '@ethersproject/abstract-provider';
+import EventEmitter from 'events';
 
 export type ProviderBaseOptions = {
   cosmosPrefix: string
@@ -17,7 +18,7 @@ export interface WalletInterface {
   getPrivateKey(): Promise<string>
 }
 
-export interface ProviderInterface {
+export interface ProviderInterface extends EventEmitter {
   getSignedTx: (transaction: TransactionRequest) => Promise<string>;
   getEthAddress: () => string;
   getCosmosAddress: () => string;

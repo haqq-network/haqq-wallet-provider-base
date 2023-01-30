@@ -5,25 +5,12 @@ export type ProviderBaseOptions = {
   cosmosPrefix: string
 }
 
-export interface WalletInterface {
-  get address(): string
-
-  get deviceId(): string
-
-  get path(): string
-
-  get publicKey(): string
-
-  set publicKey(key: string)
-  getPrivateKey(): Promise<string>
-}
-
 export interface ProviderInterface extends EventEmitter {
-  getSignedTx: (transaction: TransactionRequest) => Promise<string>;
-  getEthAddress: () => string;
-  getCosmosAddress: () => string;
-  getBase64PublicKey: () => Promise<string>;
-  signTypedData: (domainHash: string, valueHash: string) => Promise<string>;
+  getSignedTx: (path: string, transaction: TransactionRequest) => Promise<string>;
+  getEthAddress: (path: string) => Promise<string>;
+  getCosmosAddress: (path: string) => Promise<string>;
+  getBase64PublicKey: (path: string) => Promise<string>;
+  signTypedData: (path: string, domainHash: string, valueHash: string) => Promise<string>;
   abort: () => void;
 }
 

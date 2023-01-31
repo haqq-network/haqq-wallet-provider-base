@@ -2,17 +2,16 @@ import {TransactionRequest} from '@ethersproject/abstract-provider';
 import EventEmitter from 'events';
 
 export type ProviderBaseOptions = {
-  cosmosPrefix: string
+  getPassword: () => Promise<string>
 }
 
 export interface ProviderInterface extends EventEmitter {
+  getIdentifier: () => string;
   getMnemonic: () => Promise<string>;
-  getEthAddress: (path: string) => Promise<string>;
-  getCosmosAddress: (path: string) => Promise<string>;
-  getPublicKey: (path: string) => Promise<string>;
-  getBase64PublicKey: (path: string) => Promise<string>;
-  getSignedTx: (path: string, transaction: TransactionRequest) => Promise<string>;
-  signTypedData: (path: string, domainHash: string, valueHash: string) => Promise<string>;
+  getAccountInfo: (hdPath: string) => Promise<{publicKey: string, address: string}>;
+  getPrivateKey: (hdPath: string) => Promise<string>;
+  getSignedTx: (hdPath: string, transaction: TransactionRequest) => Promise<string>;
+  signTypedData: (hdPath: string, domainHash: string, valueHash: string) => Promise<string>;
   abort: () => void;
 }
 

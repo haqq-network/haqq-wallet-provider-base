@@ -6,6 +6,7 @@ export type ProviderBaseOptions = {
 }
 
 export interface ProviderInterface extends EventEmitter {
+  getMnemonic: () => Promise<string>;
   getEthAddress: (path: string) => Promise<string>;
   getCosmosAddress: (path: string) => Promise<string>;
   getPublicKey: (path: string) => Promise<string>;

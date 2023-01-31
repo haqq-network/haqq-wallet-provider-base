@@ -1,6 +1,7 @@
 import {ProviderBaseOptions} from './types';
 import EventEmitter from 'events';
 import converter from 'bech32-converting';
+import {compressPublicKey} from './compress-public-key';
 
 export class Provider<T extends object> extends EventEmitter {
   protected _options: T & ProviderBaseOptions;
@@ -10,19 +11,23 @@ export class Provider<T extends object> extends EventEmitter {
     this._options = options;
   }
 
+  getMnemonic() {
+    return Promise.resolve('');
+  }
+
   getEthAddress(_hdPath: string) {
-    return Promise.resolve('')
+    return Promise.resolve('');
   }
 
   getPublicKey(_hdPath: string) {
-    return Promise.resolve('')
+    return Promise.resolve('');
   }
 
   async getBase64PublicKey(hdPath: string) {
     let resp = ''
     try {
       const publicKey = await this.getPublicKey(hdPath)
-      resp = Buffer.from(publicKey, 'hex').toString('base64');
+      resp = Buffer.from(compressPublicKey(publicKey), 'hex').toString('base64');
       this.emit('getBase64PublicKey', true);
     } catch (e) {
       if (e instanceof Error) {

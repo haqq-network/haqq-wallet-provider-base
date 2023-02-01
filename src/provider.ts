@@ -13,10 +13,6 @@ export class Provider<T extends object> extends EventEmitter {
     return ''
   }
 
-  getMnemonic() {
-    return Promise.resolve('');
-  }
-
   getAccountInfo(_hdPath: string) {
     return Promise.resolve({publicKey: '', address: ''})
   }
@@ -31,5 +27,14 @@ export class Provider<T extends object> extends EventEmitter {
   }
 
   abort() {
+    return
+  }
+
+  clean() {
+    return Promise.resolve()
+  }
+
+  updatePin(_pin: string) {
+    return Promise.resolve()
   }
 }

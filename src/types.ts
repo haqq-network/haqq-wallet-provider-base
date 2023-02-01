@@ -9,7 +9,7 @@ export interface ProviderInterface extends EventEmitter {
   getAccountInfo: (hdPath: string) => Promise<{publicKey: string, address: string}>;
   getPrivateKey: (hdPath: string) => Promise<string>;
   signTransaction: (hdPath: string, transaction: TransactionRequest) => Promise<string>;
-  signPersonalMessage: (hdPath: string, message: string) => Promise<string>;
+  signPersonalMessage: (hdPath: string, message: string | BytesLike) => Promise<string>;
   signTypedData: (hdPath: string, domainHash: string, valueHash: string) => Promise<string>;
   abort: () => void;
   updatePin: (pin: string) => Promise<void>;

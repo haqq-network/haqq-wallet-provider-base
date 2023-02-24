@@ -28,10 +28,10 @@ export interface ProviderInterface extends EventEmitter {
   /**
    * Sign personal message
    * @param {string} hdPath HD path for subscribe
-   * @param {string} message message
+   * @param {string | BytesLike} message message
    * @returns signature of personal message
    */
-  signPersonalMessage: (hdPath: string, message: string) => Promise<string>;
+  signPersonalMessage: (hdPath: string, message: string | BytesLike) => Promise<string>;
   /**
    * Sign typed data
    * @param {string} hdPath HD path for subscribe

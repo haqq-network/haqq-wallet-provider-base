@@ -1,6 +1,6 @@
-[@haqq/provider-base - v0.0.17](README.md) / Exports
+[@haqq/provider-base - v0.0.18](README.md) / Exports
 
-# @haqq/provider-base - v0.0.17
+# @haqq/provider-base - v0.0.18
 
 ## Table of contents
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/types.ts:64](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L64)
+[src/types.ts:64](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L64)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:67](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L67)
+[src/types.ts:67](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L67)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:60](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L60)
+[src/types.ts:60](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L60)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:58](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L58)
+[src/types.ts:58](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L58)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:62](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L62)
+[src/types.ts:62](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L62)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:3](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L3)
+[src/types.ts:3](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L3)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:71](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/types.ts#L71)
+[src/types.ts:71](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L71)
 
 ## Functions
 
@@ -148,7 +148,7 @@ base64 encoded public key
 
 #### Defined in
 
-[src/base64-public-key.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/base64-public-key.ts#L8)
+[src/base64-public-key.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/base64-public-key.ts#L8)
 
 ___
 
@@ -172,7 +172,7 @@ compressed public key
 
 #### Defined in
 
-[src/compress-public-key.ts:6](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/compress-public-key.ts#L6)
+[src/compress-public-key.ts:6](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/compress-public-key.ts#L6)
 
 ___
 
@@ -195,7 +195,7 @@ get cosmos address
 
 #### Defined in
 
-[src/cosmos-address.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/cosmos-address.ts#L8)
+[src/cosmos-address.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/cosmos-address.ts#L8)
 
 ___
 
@@ -219,7 +219,7 @@ Byte array like
 
 #### Defined in
 
-[src/hex-string-to-byte-array.ts:6](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/hex-string-to-byte-array.ts#L6)
+[src/hex-string-to-byte-array.ts:6](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/hex-string-to-byte-array.ts#L6)
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[src/join-signature.ts:1](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/join-signature.ts#L1)
+[src/join-signature.ts:1](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/join-signature.ts#L1)
 
 ___
 
@@ -263,4 +263,4 @@ Byte array like for input string
 
 #### Defined in
 
-[src/string-to-utf8-bytes.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/ebbbf85/src/string-to-utf8-bytes.ts#L8)
+[src/string-to-utf8-bytes.ts:8](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/string-to-utf8-bytes.ts#L8)

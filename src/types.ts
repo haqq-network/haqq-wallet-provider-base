@@ -4,15 +4,54 @@ export type ProviderBaseOptions = {
   getPassword: () => Promise<string>
 }
 
+
+/**
+ * Base provider for other providers
+ * extends EventEmitter
+ */
 export interface ProviderInterface extends EventEmitter {
   getIdentifier: () => string;
+  /**
+   * Get public key and address for hd path
+   * @param {string} hdPath HD path
+   */
   getAccountInfo: (hdPath: string) => Promise<{publicKey: string, address: string}>;
   getPrivateKey: (hdPath: string) => Promise<string>;
+  /**
+   * Sign transaction
+   * @param {string} hdPath HD path for subscribe
+   * @param {TransactionRequest} transaction transaction for sign
+   * @returns signature of transaction
+   */
   signTransaction: (hdPath: string, transaction: TransactionRequest) => Promise<string>;
+
+  /**
+   * Sign personal message
+   * @param {string} hdPath HD path for subscribe
+   * @param {BytesLike} message message
+   * @returns signature of personal message
+   */
   signPersonalMessage: (hdPath: string, message: string | BytesLike) => Promise<string>;
+  /**
+   * Sign typed data
+   * @param {string} hdPath HD path for subscribe
+   * @param {string} domainHash
+   * @param {string} valueHash
+   * @returns signature of typed data
+   */
   signTypedData: (hdPath: string, domainHash: string, valueHash: string) => Promise<string>;
+  /**
+   * Stop action
+   */
   abort: () => void;
+  /**
+   * Update pin for encrypted providers
+   * @param {string} pin
+   */
   updatePin: (pin: string) => Promise<void>;
+  /**
+   * Clean provider storage
+   */
   clean: () => Promise<void>;
 }
 

@@ -1,3 +1,8 @@
+/**
+ * Compress public key
+ * @param {string} publicKey public key
+ * @return compressed public key
+ */
 export const compressPublicKey = (publicKey: string) => {
   const pk = publicKey.startsWith('0x') ? publicKey.slice(2) : publicKey
 

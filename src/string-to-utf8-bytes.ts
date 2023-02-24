@@ -1,9 +1,14 @@
 // tslint:disable:no-bitwise
 
-export function stringToUtf8Bytes(str: string) {
+/**
+ * convert string to byte array
+ * @param {string} input
+ * @return Byte array like for input string
+ */
+export function stringToUtf8Bytes(input: string) {
   const utf8 = [];
-  for (let i = 0; i < str.length; i++) {
-    let charcode = str.charCodeAt(i);
+  for (let i = 0; i < input.length; i++) {
+    let charcode = input.charCodeAt(i);
     if (charcode < 0x80) {
       utf8.push(charcode);
     } else if (charcode < 0x800) {
@@ -22,7 +27,7 @@ export function stringToUtf8Bytes(str: string) {
       // subtracting 0x10000 and splitting the
       // 20 bits of 0x0-0xFFFFF into two halves
       charcode =
-        0x10000 + (((charcode & 0x3ff) << 10) | (str.charCodeAt(i) & 0x3ff));
+        0x10000 + (((charcode & 0x3ff) << 10) | (input.charCodeAt(i) & 0x3ff));
       utf8.push(
         0xf0 | (charcode >> 18),
         0x80 | ((charcode >> 12) & 0x3f),

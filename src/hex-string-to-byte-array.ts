@@ -1,3 +1,8 @@
+/**
+ * convert hex string to byte array
+ * @param {string | number[]} hexString
+ * @return Byte array like
+ */
 export const hexStringToByteArray = (hexString: string | number[]) => {
   if (Array.isArray(hexString)) {
     return hexString;

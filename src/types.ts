@@ -36,8 +36,7 @@ export interface ProviderInterface extends EventEmitter {
   /**
    * Sign typed data
    * @param {string} hdPath HD path for subscribe
-   * @param {string} domainHash
-   * @param {string} valueHash
+   * @param {TypedData} typedData
    * @returns signature of typed data
    */
   signTypedData: (hdPath: string, typedData: TypedData) => Promise<string>;

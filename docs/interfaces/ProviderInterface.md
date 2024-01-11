@@ -1,4 +1,4 @@
-[@haqq/provider-base - v0.0.18](../README.md) / [Exports](../modules.md) / ProviderInterface
+[@haqq/provider-base - v0.0.20](../README.md) / [Exports](../modules.md) / ProviderInterface
 
 # Interface: ProviderInterface
 
@@ -65,7 +65,7 @@ Stop action
 
 #### Defined in
 
-[src/types.ts:46](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L46)
+[src/types.ts:46](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L46)
 
 ___
 
@@ -85,7 +85,7 @@ Clean provider storage
 
 #### Defined in
 
-[src/types.ts:55](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L55)
+[src/types.ts:55](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L55)
 
 ___
 
@@ -111,7 +111,7 @@ Get public key and address for hd path
 
 #### Defined in
 
-[src/types.ts:18](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L18)
+[src/types.ts:19](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L19)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:13](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L13)
+[src/types.ts:14](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L14)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:19](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L19)
+[src/types.ts:20](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L20)
 
 ___
 
@@ -182,7 +182,7 @@ signature of personal message
 
 #### Defined in
 
-[src/types.ts:34](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L34)
+[src/types.ts:35](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L35)
 
 ___
 
@@ -211,17 +211,17 @@ signature of transaction
 
 #### Defined in
 
-[src/types.ts:26](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L26)
+[src/types.ts:27](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L27)
 
 ___
 
 ### signTypedData
 
-• **signTypedData**: (`hdPath`: `string`, `domainHash`: `string`, `valueHash`: `string`) => `Promise`<`string`\>
+• **signTypedData**: (`hdPath`: `string`, `typedData`: [`TypedData`](../modules.md#typeddata)) => `Promise`<`string`\>
 
 #### Type declaration
 
-▸ (`hdPath`, `domainHash`, `valueHash`): `Promise`<`string`\>
+▸ (`hdPath`, `typedData`): `Promise`<`string`\>
 
 Sign typed data
 
@@ -230,8 +230,7 @@ Sign typed data
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `hdPath` | `string` | HD path for subscribe |
-| `domainHash` | `string` |  |
-| `valueHash` | `string` |  |
+| `typedData` | [`TypedData`](../modules.md#typeddata) |  |
 
 ##### Returns
 
@@ -241,7 +240,7 @@ signature of typed data
 
 #### Defined in
 
-[src/types.ts:42](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L42)
+[src/types.ts:42](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L42)
 
 ___
 
@@ -267,7 +266,7 @@ Update pin for encrypted providers
 
 #### Defined in
 
-[src/types.ts:51](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/types.ts#L51)
+[src/types.ts:51](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/types.ts#L51)
 
 ## Methods
 

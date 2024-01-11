@@ -1,4 +1,4 @@
-[@haqq/provider-base - v0.0.18](../README.md) / [Exports](../modules.md) / Provider
+[@haqq/provider-base - v0.0.20](../README.md) / [Exports](../modules.md) / Provider
 
 # Class: Provider<T\>
 
@@ -92,7 +92,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/provider.ts:12](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L12)
+[src/provider.ts:13](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L13)
 
 ## Properties
 
@@ -102,7 +102,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/provider.ts:10](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L10)
+[src/provider.ts:11](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L11)
 
 ___
 
@@ -188,7 +188,7 @@ ProviderInterface.abort
 
 #### Defined in
 
-[src/provider.ts:46](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L46)
+[src/provider.ts:47](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L47)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/provider.ts:41](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L41)
+[src/provider.ts:42](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L42)
 
 ___
 
@@ -264,7 +264,7 @@ ProviderInterface.clean
 
 #### Defined in
 
-[src/provider.ts:50](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L50)
+[src/provider.ts:51](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L51)
 
 ___
 
@@ -403,7 +403,7 @@ ProviderInterface.getAccountInfo
 
 #### Defined in
 
-[src/provider.ts:33](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L33)
+[src/provider.ts:34](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L34)
 
 ___
 
@@ -421,7 +421,7 @@ ProviderInterface.getIdentifier
 
 #### Defined in
 
-[src/provider.ts:29](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L29)
+[src/provider.ts:30](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L30)
 
 ___
 
@@ -474,7 +474,7 @@ ProviderInterface.getPrivateKey
 
 #### Defined in
 
-[src/provider.ts:37](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L37)
+[src/provider.ts:38](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L38)
 
 ___
 
@@ -1068,7 +1068,7 @@ ProviderInterface.signPersonalMessage
 
 #### Defined in
 
-[src/provider.ts:21](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L21)
+[src/provider.ts:22](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L22)
 
 ___
 
@@ -1097,13 +1097,13 @@ ProviderInterface.signTransaction
 
 #### Defined in
 
-[src/provider.ts:17](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L17)
+[src/provider.ts:18](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L18)
 
 ___
 
 ### signTypedData
 
-▸ **signTypedData**(`_hdPath`, `_domainHash`, `_valueHash`): `Promise`<`string`\>
+▸ **signTypedData**(`_hdPath`, `typedData`): `Promise`<`string`\>
 
 Sign typed data
 
@@ -1112,8 +1112,7 @@ Sign typed data
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_hdPath` | `string` | HD path for subscribe |
-| `_domainHash` | `string` |  |
-| `_valueHash` | `string` |  |
+| `typedData` | [`TypedData`](../modules.md#typeddata) |  |
 
 #### Returns
 
@@ -1127,7 +1126,7 @@ ProviderInterface.signTypedData
 
 #### Defined in
 
-[src/provider.ts:25](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L25)
+[src/provider.ts:26](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L26)
 
 ___
 
@@ -1153,7 +1152,7 @@ ProviderInterface.updatePin
 
 #### Defined in
 
-[src/provider.ts:54](https://github.com/haqq-network/haqq-wallet-provider-base/blob/f5a64ba/src/provider.ts#L54)
+[src/provider.ts:55](https://github.com/haqq-network/haqq-wallet-provider-base/blob/300472e/src/provider.ts#L55)
 
 ___
 

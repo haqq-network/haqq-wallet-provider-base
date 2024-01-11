@@ -6,3 +6,4 @@ export * from './provider';
 export * from './join-signature';
 export * from './string-to-utf8-bytes';
 export * from './types';
+export * from './prepare-hashed-eip712-data';

@@ -2,7 +2,8 @@ import {
   BytesLike,
   ProviderBaseOptions,
   ProviderInterface,
-  TransactionRequest
+  TransactionRequest,
+  TypedData
 } from './types';
 import EventEmitter from 'events';
 
@@ -22,7 +23,7 @@ export class Provider<T extends object> extends EventEmitter implements Provider
     throw new Error('not implemented')
   }
 
-  signTypedData(_hdPath: string, _domainHash: string, _valueHash: string): Promise<string> {
+  signTypedData(_hdPath: string, typedData: TypedData): Promise<string> {
     throw new Error('not implemented')
   }
 

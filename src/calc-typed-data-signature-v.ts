@@ -12,5 +12,5 @@ export function calcTypedDataSignatureV(signature: string) {
   }
   const offset = 27;
   const v = (orginalV + offset).toString(16);
-  signature = '0x' + signature.slice(0, -2) + v;
+  return '0x' + signature.slice(0, -2) + v;
 }

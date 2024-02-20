@@ -4,10 +4,10 @@
  * @return compressed public key
  */
 export const compressPublicKey = (publicKey: string) => {
-  const pk = publicKey.startsWith('0x') ? publicKey.slice(2) : publicKey
+  const pk = publicKey.startsWith('0x') ? publicKey.slice(2) : publicKey;
 
   if (pk.length === 66 && (pk.startsWith('02') || pk.startsWith('03'))) {
-    return pk
+    return pk;
   }
 
   const pk1 = Buffer.from(pk, 'hex');

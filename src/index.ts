@@ -7,3 +7,4 @@ export * from './join-signature';
 export * from './string-to-utf8-bytes';
 export * from './types';
 export * from './prepare-hashed-eip712-data';
+export * from './calc-typed-data-signature-v';

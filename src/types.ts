@@ -1,10 +1,9 @@
-import { TypedDataField } from 'ethers';
+import {TypedDataField} from 'ethers';
 import EventEmitter from 'events';
 
 export type ProviderBaseOptions = {
-  getPassword: () => Promise<string>
-}
-
+  getPassword: () => Promise<string>;
+};
 
 /**
  * Base provider for other providers
@@ -16,7 +15,9 @@ export interface ProviderInterface extends EventEmitter {
    * Get public key and address for hd path
    * @param {string} hdPath HD path
    */
-  getAccountInfo: (hdPath: string) => Promise<{ publicKey: string, address: string }>;
+  getAccountInfo: (
+    hdPath: string,
+  ) => Promise<{publicKey: string; address: string}>;
   getPrivateKey: (hdPath: string) => Promise<string>;
   /**
    * Sign transaction
@@ -24,7 +25,10 @@ export interface ProviderInterface extends EventEmitter {
    * @param {TransactionRequest} transaction transaction for sign
    * @returns signature of transaction
    */
-  signTransaction: (hdPath: string, transaction: TransactionRequest) => Promise<string>;
+  signTransaction: (
+    hdPath: string,
+    transaction: TransactionRequest,
+  ) => Promise<string>;
 
   /**
    * Sign personal message
@@ -32,7 +36,10 @@ export interface ProviderInterface extends EventEmitter {
    * @param {string | BytesLike} message message
    * @returns signature of personal message
    */
-  signPersonalMessage: (hdPath: string, message: string | BytesLike) => Promise<string>;
+  signPersonalMessage: (
+    hdPath: string,
+    message: string | BytesLike,
+  ) => Promise<string>;
   /**
    * Sign typed data
    * @param {string} hdPath HD path for subscribe
@@ -61,24 +68,25 @@ export type BigNumberish = Bytes | bigint | string | number;
 
 export type BytesLike = Bytes | string;
 
-export type AccessList = { address: string, storageKeys: string[] }[];
+export type AccessList = {address: string; storageKeys: string[]}[];
 
 // Input allows flexibility in describing an access list
-export type AccessListish = AccessList |
-  [string, string[]][] |
-  Record<string, string[]>;
+export type AccessListish =
+  | AccessList
+  | [string, string[]][]
+  | Record<string, string[]>;
 
 export type TransactionRequest = {
-  to?: string,
-  from?: string,
-  nonce?: BigNumberish,
+  to?: string;
+  from?: string;
+  nonce?: BigNumberish;
 
-  gasLimit?: BigNumberish,
-  gasPrice?: BigNumberish,
+  gasLimit?: BigNumberish;
+  gasPrice?: BigNumberish;
 
-  data?: BytesLike,
-  value?: BigNumberish,
-  chainId?: number
+  data?: BytesLike;
+  value?: BigNumberish;
+  chainId?: number;
 
   type?: number;
   accessList?: AccessListish;
@@ -88,12 +96,12 @@ export type TransactionRequest = {
 
   customData?: Record<string, any>;
   ccipReadEnabled?: boolean;
-}
+};
 
 export type TypedDataTypesNames = string | 'EIP712Domain';
 
 export type TypedData = {
   domain: Record<string, any>;
-  types: Record<TypedDataTypesNames, Array<TypedDataField>>;
+  types: Record<TypedDataTypesNames, TypedDataField[]>;
   message: Record<string, any>;
-}
+};

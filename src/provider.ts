@@ -3,40 +3,46 @@ import {
   ProviderBaseOptions,
   ProviderInterface,
   TransactionRequest,
-  TypedData
+  TypedData,
 } from './types';
 import EventEmitter from 'events';
 
-export class Provider<T extends object> extends EventEmitter implements ProviderInterface {
+export class Provider<T extends object>
+  extends EventEmitter
+  implements ProviderInterface
+{
   protected _options: T & ProviderBaseOptions;
 
   constructor(options: T & ProviderBaseOptions) {
-    super()
+    super();
     this._options = options;
   }
 
-  signTransaction(_hdPath: string, _transaction: TransactionRequest): Promise<string> {
-    throw new Error('not implemented')
+  signTransaction(
+    _hdPath: string,
+    _transaction: TransactionRequest,
+  ): Promise<string> {
+    throw new Error('not implemented');
   }
 
   signPersonalMessage(_hdPath: string, _message: BytesLike): Promise<string> {
-    throw new Error('not implemented')
+    throw new Error('not implemented');
   }
 
   signTypedData(_hdPath: string, typedData: TypedData): Promise<string> {
-    throw new Error('not implemented')
+    throw new Error('not implemented');
   }
 
   getIdentifier() {
-    return ''
+    return '';
   }
 
   getAccountInfo(_hdPath: string) {
-    return Promise.resolve({publicKey: '', address: ''})
+    return Promise.resolve({publicKey: '', address: ''});
   }
 
   getPrivateKey(_hdPath: string): Promise<string> {
-    throw new Error('not implemented')
+    throw new Error('not implemented');
   }
 
   catchError(e: Error, source: string) {
@@ -45,14 +51,14 @@ export class Provider<T extends object> extends EventEmitter implements Provider
   }
 
   abort() {
-    return
+    return;
   }
 
   clean() {
-    return Promise.resolve()
+    return Promise.resolve();
   }
 
   updatePin(_pin: string) {
-    return Promise.resolve()
+    return Promise.resolve();
   }
 }

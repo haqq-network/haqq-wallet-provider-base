@@ -5,5 +5,5 @@ export function joinSignature(signature: string) {
     sig[64] = sig[64] ? 28 : 27;
   }
 
-  return sig.toString('hex')
+  return sig.toString('hex');
 }

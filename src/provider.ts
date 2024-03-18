@@ -45,8 +45,14 @@ export class Provider<T extends object>
     throw new Error('not implemented');
   }
 
-  catchError(e: Error, source: string) {
-    this.emit(source, false, e.message, e.name);
+  catchError(e: Error, source: string, handled: boolean = false) {
+    if (!handled) {
+      this.emit(source, false, e.message, e.name);
+    }
+    this.emit('catch-error', {
+      error: e,
+      source,
+    });
     throw new Error(e.message);
   }
 

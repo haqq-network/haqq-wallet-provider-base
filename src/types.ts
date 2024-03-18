@@ -105,3 +105,8 @@ export type TypedData = {
   types: Record<TypedDataTypesNames, TypedDataField[]>;
   message: Record<string, any>;
 };
+
+export type ProviderBaseError = {
+  error: Error;
+  source: string;
+};
